@@ -82,23 +82,49 @@
         <system>jenkins</system>
         <url>https://junit.ci.cloudbees.com/</url>
     </ciManagement>
+    
     <distributionManagement>
-        <downloadUrl>https://github.com/junit-team/junit/wiki/Download-and-Install</downloadUrl>
+        <!-- <downloadUrl>https://github.com/junit-team/junit/wiki/Download-and-Install</downloadUrl> -->
         <snapshotRepository>
             <id>junit-snapshot-repo</id>
             <name>Nexus Snapshot Repository</name>
-            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+            <url>http://localhost:8081/nexus/content/repositories/snapshots/</url>
         </snapshotRepository>
         <repository>
             <id>junit-releases-repo</id>
             <name>Nexus Release Repository</name>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+            <url>http://localhost:8081/nexus/content/repositories/releases/</url>
         </repository>
-        <site>
+        <!-- <site>
             <id>junit.github.io</id>
             <url>gitsite:git@github.com/junit-team/junit.git</url>
-        </site>
+        </site> -->
     </distributionManagement>
+
+    <repositories>
+        <repository>
+            <id>releases</id>
+            <url>http://localhost:8081/nexus/content/groups/public/</url>
+            <releases>  
+            <enabled>true</enabled>
+            </releases>
+            <snapshots>
+            <enabled>true</enabled>
+            </snapshots>
+        </repository>
+   </repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>releases</id>
+            <url>http://localhost:8081/nexus/content/groups/public/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
 
     <properties>
         <jdkVersion>1.5</jdkVersion>
