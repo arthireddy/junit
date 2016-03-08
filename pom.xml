@@ -100,7 +100,7 @@
             <url>gitsite:git@github.com/junit-team/junit.git</url>
         </site> -->
     </distributionManagement>
-
+<!--
     <repositories>
         <repository>
             <id>releases</id>
@@ -125,7 +125,7 @@
             </snapshots>
         </pluginRepository>
     </pluginRepositories>
-
+-->
     <properties>
         <jdkVersion>1.5</jdkVersion>
         <project.build.sourceEncoding>ISO-8859-1</project.build.sourceEncoding>
