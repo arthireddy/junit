@@ -86,12 +86,12 @@
     <distributionManagement>
         <!-- <downloadUrl>https://github.com/junit-team/junit/wiki/Download-and-Install</downloadUrl> -->
         <snapshotRepository>
-            <id>junit-snapshot-repo</id>
+            <id>snapshots</id>
             <name>Nexus Snapshot Repository</name>
             <url>http://localhost:8081/nexus/content/repositories/snapshots/</url>
         </snapshotRepository>
         <repository>
-            <id>junit-releases-repo</id>
+            <id>releases</id>
             <name>Nexus Release Repository</name>
             <url>http://localhost:8081/nexus/content/repositories/releases/</url>
         </repository>
@@ -100,16 +100,16 @@
             <url>gitsite:git@github.com/junit-team/junit.git</url>
         </site> -->
     </distributionManagement>
-<!--
+
     <repositories>
         <repository>
             <id>releases</id>
             <url>http://localhost:8081/nexus/content/groups/public/</url>
             <releases>  
-            <enabled>true</enabled>
+                <enabled>true</enabled>
             </releases>
             <snapshots>
-            <enabled>true</enabled>
+                <enabled>true</enabled>
             </snapshots>
         </repository>
    </repositories>
@@ -125,7 +125,7 @@
             </snapshots>
         </pluginRepository>
     </pluginRepositories>
--->
+
     <properties>
         <jdkVersion>1.5</jdkVersion>
         <project.build.sourceEncoding>ISO-8859-1</project.build.sourceEncoding>
